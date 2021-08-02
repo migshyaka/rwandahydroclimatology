@@ -18,10 +18,15 @@ from app import app
 
 
 # reading the dataset
-par_dir = os.pardir
-data_path = os.path.join(par_dir, "datasets")
-#data_path = Path(data_path)
-dfn = pd.read_csv("/Users/pntaganda2/Documents/summner2021/proj/datasets/Minimum temperature.csv")
+# par_dir = os.pardir
+# data_path = os.path.join(par_dir, "datasets")
+# #data_path = Path(data_path)
+# dfn = pd.read_csv("/Users/pntaganda2/Documents/summner2021/proj/datasets/Minimum temperature.csv")
+
+PATH = pathlib.Path(__file__).parent
+DATA_PATH = PATH.joinpath("../datasets").resolve()
+dfn = pd.read_csv(DATA_PATH.joinpath("Minimum temperature.csv"))
+
 
 #pre-processing( adding date column to the dataframe)
 dfn["date"]= pd.to_datetime(dfn[["Year","Month","Day"]])
