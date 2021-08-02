@@ -6,10 +6,15 @@ import datetime
 import os
 from app import app
 
-par_dir = os.pardir
-data_path = os.path.join(par_dir, "datasets")
-#data_path = Path(data_path)
-df = pd.read_csv("/Users/pntaganda2/Documents/summner2021/proj/datasets/Daily rainfall in mm.csv")
+# par_dir = os.pardir
+# data_path = os.path.join(par_dir, "datasets")
+# #data_path = Path(data_path)
+# df = pd.read_csv("/Users/pntaganda2/Documents/summner2021/proj/datasets/Daily rainfall in mm.csv")
+
+PATH = pathlib.Path(__file__).parent
+DATA_PATH = PATH.joinpath("../datasets").resolve()
+dfn = pd.read_csv(DATA_PATH.joinpath("Daily rainfall in mm.csv"))
+
 
 # In[2]:
 
