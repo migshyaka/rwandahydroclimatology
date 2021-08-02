@@ -21,9 +21,11 @@ from app import app
 # data_path = Path(data_path)
 # df = pd.read_csv("../datasets/Maximum temperature.csv")
 # df.head()
-PATH = pathlib.Path(__file__).parent
-DATA_PATH = PATH.joinpath("rwandahydroclimatology/datasets").resolve()
-df = pd.read_csv(DATA_PATH.joinpath("Maximum temperature.csv"))
+# PATH = pathlib.Path(__file__).parent
+# DATA_PATH = PATH.joinpath("../rwandahydroclimatology/datasets").resolve()
+# df = pd.read_csv(DATA_PATH.joinpath("Maximum temperature.csv"))
+df = pd.read_csv("rwandahydroclimatology/datasets/datasets/Maximum temperature.csv")
+
 
 # In[7]:
 
