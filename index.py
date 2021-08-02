@@ -14,9 +14,10 @@ import plotly.graph_objects as go
 from app import app
 from app import server
 from apps import Maxtemp, mintemp, precipitation
-par_diri = os.pardir
-data_pathi = os.path.join(par_diri, "datasets")
-dfi = pd.read_csv("/Users/pntaganda2/Documents/summner2021/proj/datasets/Daily rainfall in mm.csv")
+
+PATH = pathlib.Path(__file__).parent
+DATA_PATH = PATH.joinpath("../datasets").resolve()
+dfi = pd.read_csv(DATA_PATH.joinpath("Daily rainfall in mm.csv"))
 dfi_i= dfi.iloc[:, [0, 1, 2]]
 dfi_i= dfi_i.drop_duplicates()
 dfi_i= gpd.GeoDataFrame(dfi_i, geometry=gpd.points_from_xy(dfi_i.Lon,dfi_i.Lat))
