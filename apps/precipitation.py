@@ -14,7 +14,7 @@ import pathlib
 # df = pd.read_csv("/Users/pntaganda2/Documents/summner2021/proj/datasets/Daily rainfall in mm.csv")
 
 PATH = pathlib.Path(__file__).parent
-DATA_PATH = PATH.joinpath("../datasets").resolve()
+DATA_PATH = PATH.joinpath("rwandahydroclimatology/datasets").resolve()
 df = pd.read_csv(DATA_PATH.joinpath("Daily rainfall in mm.csv"))
 
 
