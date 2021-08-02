@@ -15,7 +15,7 @@ import pathlib
 
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../datasets").resolve()
-dfn = pd.read_csv(DATA_PATH.joinpath("Daily rainfall in mm.csv"))
+df = pd.read_csv(DATA_PATH.joinpath("Daily rainfall in mm.csv"))
 
 
 # In[2]:
