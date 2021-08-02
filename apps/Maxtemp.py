@@ -16,11 +16,14 @@ from pathlib import Path
 from app import app
 
 # reading the dataset
-par_dir = os.pardir
-data_path = os.path.join(par_dir, "datasets")
-data_path = Path(data_path)
-df = pd.read_csv("../datasets/Maximum temperature.csv")
-df.head()
+# par_dir = os.pardir
+# data_path = os.path.join(par_dir, "../datasets")
+# data_path = Path(data_path)
+# df = pd.read_csv("../datasets/Maximum temperature.csv")
+# df.head()
+PATH = pathlib.Path(__file__).parent
+DATA_PATH = PATH.joinpath("../datasets").resolve()
+df = pd.read_csv(DATA_PATH.joinpath("Maximum temperature.csv"))
 
 # In[7]:
 
