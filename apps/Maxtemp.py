@@ -19,7 +19,7 @@ from app import app
 par_dir = os.pardir
 data_path = os.path.join(par_dir, "datasets")
 data_path = Path(data_path)
-df = pd.read_csv("/Users/pntaganda2/Documents/summner2021/proj/datasets/Maximum temperature.csv")
+df = pd.read_csv("../datasets/Maximum temperature.csv")
 df.head()
 
 # In[7]:
