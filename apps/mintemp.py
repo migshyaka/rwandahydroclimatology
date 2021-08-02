@@ -26,7 +26,7 @@ import pathlib
 # dfn = pd.read_csv("/Users/pntaganda2/Documents/summner2021/proj/datasets/Minimum temperature.csv")
 
 PATH = pathlib.Path(__file__).parent
-DATA_PATH = PATH.joinpath("../datasets").resolve()
+DATA_PATH = PATH.joinpath("rwandahydroclimatology/datasets").resolve()
 dfn = pd.read_csv(DATA_PATH.joinpath("Minimum temperature.csv"))
 
 
