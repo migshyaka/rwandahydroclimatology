@@ -30,3 +30,4 @@ Shapely==1.7.1
 six==1.16.0
 tenacity==8.0.1
 Werkzeug==2.0.1
+python-3.9.9
